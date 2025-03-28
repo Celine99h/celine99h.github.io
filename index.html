@@ -8,6 +8,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PKVXM56P');</script>
 <!-- End Google Tag Manager -->
 </head>
+<script>
+  document.getElementById('add-to-cart-button').addEventListener('click', function() {
+    window.dataLayer = window.dataLayer || [];
+    
+    window.dataLayer.push({
+      'event': 'add_to_cart',
+      'value': 100.00,
+      'product_name': 'Exempelprodukt',
+      'product_id': '12345',
+      'currency': 'SEK'
+    });
+    
+    console.log('Produkt tillagd i kundvagn:', {
+      'value': 100.00,
+      'product_name': 'Exempelprodukt',
+      'product_id': '12345',
+      'currency': 'SEK'
+    });
+  });
+</script>
 <body>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKVXM56P"
